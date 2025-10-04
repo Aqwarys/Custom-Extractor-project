@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=80.9.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "customs_data_extractor"
+version = "0.1.0"
+authors = [
+  { name="Alisher Aqwa", email="aqwaryss@gmail.com" },
+]
+description = "A package to extract customs data from a paginated API."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "requests",
+    "pandas",
+    "tqdm"
+]
+
+[project.scripts]
+# Это определяет консольную команду, которая будет доступна после установки
+extract-customs-data = "customs_data_extractor.cli:main"
